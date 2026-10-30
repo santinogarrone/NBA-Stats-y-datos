@@ -16,7 +16,7 @@ export function FilterForm({ children, action }: { children: ReactNode; action: 
         if (t instanceof HTMLInputElement && (t.type === "search" || t.type === "text")) return;
         ref.current?.requestSubmit();
       }}
-      className="flex flex-wrap items-end gap-3"
+      className="filter-bar flex flex-wrap items-end gap-3"
     >
       {children}
       <noscript>

@@ -25,7 +25,7 @@ export function GameCard({ game, teams, tz, showDate = false }: { game: Game; te
   );
 
   return (
-    <article className="rounded-xl border border-line bg-surface p-3.5" aria-label={`${away?.fullName ?? game.away.abbr} en ${home?.fullName ?? game.home.abbr}`}>
+    <article className="game-card rounded-xl border p-3.5" aria-label={`${away?.fullName ?? game.away.abbr} en ${home?.fullName ?? game.home.abbr}`}>
       <div className="mb-2.5 flex items-center justify-between text-xs">
         <span className="text-muted">
           {showDate && <>{formatYmdShort(game.etDate)} · </>}

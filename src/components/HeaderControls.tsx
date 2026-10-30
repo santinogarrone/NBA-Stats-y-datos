@@ -10,7 +10,7 @@ export function RefreshButton() {
       type="button"
       onClick={() => start(() => refreshData())}
       disabled={pending}
-      className="rounded-md border border-line px-3 py-1.5 text-sm text-muted transition-colors hover:bg-surface-2 hover:text-ink disabled:opacity-60"
+      className="toolbar-control rounded-lg border px-3 py-1.5 text-sm text-muted transition-colors hover:bg-surface-2 hover:text-ink disabled:opacity-60"
       aria-live="polite"
     >
       {pending ? "Actualizando…" : "Actualizar datos"}
@@ -33,7 +33,7 @@ export function TimeZoneSelect({ current, options }: { current: string; options:
           fd.set("tz", e.target.value);
           start(() => setTimeZone(fd));
         }}
-        className="rounded-md border border-line bg-surface px-2 py-1.5 text-sm text-ink"
+        className="toolbar-control rounded-lg border bg-surface px-2 py-1.5 text-sm text-ink"
       >
         {list.map((tz) => (
           <option key={tz} value={tz}>

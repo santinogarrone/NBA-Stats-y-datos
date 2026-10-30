@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 export function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <section className={`rounded-xl border border-line bg-surface p-4 sm:p-5 ${className}`}>{children}</section>;
+  return <section className={`surface-card rounded-2xl border p-4 sm:p-5 ${className}`}>{children}</section>;
 }
 
 export function SectionTitle({
@@ -16,9 +16,9 @@ export function SectionTitle({
   id?: string;
 }) {
   return (
-    <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
+    <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
       <div>
-        <h2 id={id} className="text-lg font-semibold tracking-tight">
+        <h2 id={id} className="text-lg font-semibold tracking-tight sm:text-xl">
           {title}
         </h2>
         {subtitle && <p className="text-sm text-muted">{subtitle}</p>}
@@ -30,17 +30,17 @@ export function SectionTitle({
 
 export function PageTitle({ title, subtitle }: { title: string; subtitle?: string }) {
   return (
-    <header className="mb-5">
-      <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{title}</h1>
-      {subtitle && <p className="mt-1 text-sm text-muted">{subtitle}</p>}
+    <header className="page-title mb-6">
+      <h1 className="bg-gradient-to-r from-ink via-ink to-muted bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-3xl">{title}</h1>
+      {subtitle && <p className="mt-1.5 text-sm text-muted">{subtitle}</p>}
     </header>
   );
 }
 
 export function EmptyState({ title, hint }: { title: string; hint?: string }) {
   return (
-    <div className="rounded-lg border border-dashed border-line px-4 py-8 text-center" role="status">
-      <p className="font-medium">{title}</p>
+    <div className="rounded-xl border border-dashed border-line bg-surface/45 px-4 py-9 text-center" role="status">
+      <p className="font-semibold">{title}</p>
       {hint && <p className="mt-1 text-sm text-muted">{hint}</p>}
     </div>
   );
@@ -66,7 +66,7 @@ export function Badge({
 
 export function StatTile({ label, value, hint }: { label: string; value: ReactNode; hint?: string }) {
   return (
-    <div className="rounded-lg bg-surface-2 px-3 py-2.5">
+    <div className="stat-tile rounded-xl px-3 py-3">
       <div className="text-xs uppercase tracking-wide text-muted">{label}</div>
       <div className="num mt-0.5 text-xl font-semibold">{value}</div>
       {hint && <div className="mt-0.5 text-xs text-muted">{hint}</div>}

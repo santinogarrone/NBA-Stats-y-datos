@@ -37,8 +37,8 @@ export function SortableTable<T>({
 }) {
   if (rows.length === 0 && empty) return <>{empty}</>;
   return (
-    <div className="overflow-x-auto rounded-lg border border-line">
-      <table className="w-full min-w-max border-collapse text-sm">
+    <div className="table-frame overflow-x-auto rounded-xl border">
+      <table className="data-table w-full min-w-max border-collapse text-sm">
         <caption className="sr-only">{caption}</caption>
         <thead className="bg-surface-2 text-xs uppercase tracking-wide text-muted">
           <tr>

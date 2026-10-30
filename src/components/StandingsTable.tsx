@@ -18,8 +18,8 @@ export function StandingsTable({ table, compact = false, limit }: { table: Confe
           <Badge tone={tone}>{CONFERENCE_LABEL[table.conference]}</Badge> Conferencia {CONFERENCE_LABEL[table.conference]}
         </h3>
       </div>
-      <div className="overflow-x-auto rounded-lg border border-line">
-        <table className="w-full min-w-max border-collapse text-sm">
+      <div className="table-frame overflow-x-auto rounded-xl border">
+        <table className="data-table w-full min-w-max border-collapse text-sm">
           <caption className="sr-only">Clasificación de la Conferencia {CONFERENCE_LABEL[table.conference]}</caption>
           <thead className="bg-surface-2 text-xs uppercase tracking-wide text-muted">
             <tr>

@@ -23,8 +23,8 @@ export function NavLinks() {
             key={l.href}
             href={l.href}
             aria-current={active ? "page" : undefined}
-            className={`whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-              active ? "bg-accent text-accent-ink" : "text-muted hover:bg-surface-2 hover:text-ink"
+            className={`nav-link whitespace-nowrap rounded-lg px-3 py-1.5 text-sm font-medium ${
+              active ? "nav-link-active" : "text-muted hover:border-line hover:bg-surface-2/80 hover:text-ink"
             }`}
           >
             {l.label}

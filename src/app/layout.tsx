@@ -19,11 +19,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <a href="#contenido" className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-accent focus:px-3 focus:py-1.5 focus:text-accent-ink">
           Saltar al contenido
         </a>
-        <header className="sticky top-0 z-40 border-b border-line bg-bg/95 backdrop-blur">
-          <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+        <header className="site-header sticky top-0 z-40 border-b backdrop-blur-xl">
+          <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6">
             <div className="flex items-center justify-between gap-4">
-              <Link href="/" className="text-lg font-bold tracking-tight">
-                NBA<span className="text-accent"> Stats</span>
+              <Link href="/" className="flex items-center gap-2.5 text-lg font-bold tracking-tight">
+                <span className="brand-mark" aria-hidden="true">NBA</span>
+                <span>NBA<span className="text-accent"> Stats</span></span>
               </Link>
               <div className="flex items-center gap-2 sm:hidden">
                 <TimeZoneSelect current={tz} options={TIME_ZONE_OPTIONS} />
@@ -36,11 +37,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </div>
           </div>
         </header>
-        <main id="contenido" className="mx-auto w-full max-w-6xl flex-1 px-4 py-6">
+        <main id="contenido" className="mx-auto w-full max-w-7xl flex-1 px-4 py-7 sm:px-6 sm:py-9">
           {children}
         </main>
-        <footer className="border-t border-line px-4 py-6 text-xs text-muted">
-          <div className="mx-auto max-w-6xl space-y-1">
+        <footer className="border-t border-line/70 bg-surface/35 px-4 py-6 text-xs text-muted">
+          <div className="mx-auto max-w-7xl space-y-2 sm:px-6">
             <p className="sm:hidden">
               <RefreshButton />
             </p>
